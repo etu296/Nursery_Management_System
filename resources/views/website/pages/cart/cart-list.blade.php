@@ -13,8 +13,10 @@
                   </div>
                 </div>
               <div class="ps-cart__total">
-                <p>Number of items:<span>36</span></p>
-                <p>Item Total:<span>{{$data['product_price'] * $data['product_qty']}}</span></p>
+                
+                <p>Sub Total:<span>{{$data['product_price'] * $data['product_qty']}}</span></p>
+                <p>Sub Total:<span>{{$data['product_price'] * $data['product_qty']}}</span></p>
+
               </div>
               @endforeach
               @endif

@@ -62,6 +62,12 @@ class CartController extends Controller
 
             return redirect()->back()->with('msg', 'Product Added to Cart.');
         }
+        else {
+            $cartexist[$id]['product_qty']++;
+            session()->put('cart', $cartexist);
+
+            return redirect()->back()->with('msg', 'Product Added to Cart.');
+        }
         
     }
     public function GetCart()
