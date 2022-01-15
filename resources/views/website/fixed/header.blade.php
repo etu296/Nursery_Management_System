@@ -58,7 +58,7 @@
                         </li>
                         <li class="menu-item-has-children"><a href="whishlist.html">Other Pages</a>
                               <ul class="sub-menu">
-                                <li><a href="">Shopping Cart</a></li>
+                                <li><a href="{{route('get.cart')}}">Shopping Cart</a></li>
                                 <li><a href="{{route('website.checkout')}}">Checkout</a></li>
                                 <li><a href="whishlist.html">Whishlist</a></li>
                               </ul>

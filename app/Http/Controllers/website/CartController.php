@@ -32,25 +32,31 @@ class CartController extends Controller
         {
             return redirect()->back()->with('error','Product not found....!');
         }
-        $cartexist=session()->get('cart');
-        if(!$cartexist)
+        $cartExist=session()->get('cart');
+       
+        if(!$cartExist)
         {
+           
             $cartdata=[
-                $id=[
+                $id=>[
                     'product_id' => $id,
                     'product_name' => $product->product_name,
                     'product_price' => $product->product_price,
                     'product_qty' => 1,
                     'product_img' => $product->product_image
                 ]
-                ];
-                session()->put('cart',$cartdata);
-                return redirect()->back()->with('msg', 'Product Added to Cart.');
+            ];
+         
+            
+            session()->put('cart',$cartdata);
+            return redirect()->back()->with('msg', 'Product Added to Cart.');
         }
-
-        if(!isset($cartexist[$id]))
+        
+        
+     
+        if(!isset($cartExist[$id]))
         {
-            $cartexist[$id] = [
+            $cartExist[$id] = [
                 'product_id' => $id,
                 'product_name' => $product->product_name,
                 'product_price' => $product->product_price,
@@ -58,17 +64,19 @@ class CartController extends Controller
                 'product_img' => $product->product_image
             ];
 
-            session()->put('cart', $cartexist);
+            session()->put('cart', $cartExist);
 
             return redirect()->back()->with('msg', 'Product Added to Cart.');
+            
         }
-        else {
-            $cartexist[$id]['product_qty']++;
-            session()->put('cart', $cartexist);
+      
+            $cartExist[$id]['product_qty']++;
+            session()->put('cart', $cartExist);
 
             return redirect()->back()->with('msg', 'Product Added to Cart.');
-        }
         
+        
+       
     }
     public function GetCart()
     {
