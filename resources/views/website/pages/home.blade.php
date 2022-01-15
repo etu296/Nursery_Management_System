@@ -1,12 +1,11 @@
 @extends('website.master')
 @section('content')
 
-
 <div class="ps-section ps-home-best-product">
       <div class="ps-container">
         <div class="ps-section__header text-center">
           <p>Choose your need item</p>
-          <h3 class="ps-section__title">BEST OUR PRODUCT</h3><span class="ps-section__line"></span>
+          <h3 class="ps-section__title"> OUR BEST PRODUCT</h3><span class="ps-section__line"></span>
         </div>
         <div class="ps-section__content mt-100">
           <div class="row">

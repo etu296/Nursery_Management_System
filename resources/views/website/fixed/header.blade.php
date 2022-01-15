@@ -26,7 +26,7 @@
         </div>
       </div>
       <nav class="navigation">
-        <div class="ps-container"><a class="ps-logo" href="index-2.html"><img src="{{url('/frontend/images/logo.png')}}" alt=""></a>
+        <div class="ps-container"><a class="ps-logo" href="{{route('home')}}"><img src="{{url('/frontend/images/logo.png')}}" alt=""></a>
               <ul class="main-menu menu">
 			  <li><a href="{{route('home')}}">Home</a></li>
 
@@ -39,7 +39,7 @@
                           <li><a href="{{route('plantlist')}}">Plants</a></li>
                           <li><a href="product-list.html">Fartilizers</a></li>
                           <li><a href="product-list.html">Tools</a></li>
-                          
+                          <li><a href="product-list.html">Soil</a></li>
                         </ul>
                       </div>
                       
@@ -96,10 +96,19 @@
     @if(session()->has('error'))
 <p class="alert alert-danger">{{session()->get('error')}}</p>
 @endif
-    <div class="ps-hero bg--cover" data-background="{{url('/frontend/images/s3.jpg')}}">
-      
-    </div>
-      
+    
+    <style type="text/css">
+.bgimg {
+    background-image: url(/frontend/images/slide2.jpg);
+    width: 1800px;
+    height: 300px;
+}
+</style>
+
+<div class="bgimg">
+   
+</div>
+     
   
 
 			

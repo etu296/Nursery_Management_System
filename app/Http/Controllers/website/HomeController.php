@@ -36,7 +36,7 @@ class HomeController extends Controller
     {
     
         $product=Product::find($id);
-         return view('website.pages.productview',compact('product'));
+         return view('website.pages.product.productview',compact('product'));
     }
 
     public function plantcare()
@@ -46,7 +46,7 @@ class HomeController extends Controller
     public function product()
     {
         $products=Product::all();
-        return view('website.pages.products-list',compact('products'));
+        return view('website.pages.product.products-list',compact('products'));
     }
     public function website_Search()
     {
