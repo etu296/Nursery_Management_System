@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 //for website
 Route::get('/home',[HomeController::class,'home'])->name('home');
+Route::get('/product/cetagory/{id}',[HomeController::class,'ProductCetagory'])->name('website.product.cetagories');
 Route::get('/product',[HomeController::class,'product'])->name('product');
 Route::get('/search/products/website',[HomeController::class,'website_Search'])->name('website.product.search');
 Route::get('/about',[HomeController::class,'about'])->name('about');
@@ -48,7 +49,7 @@ Route::get('/user/profile',[UserProfileController::class,'UserProfile'])->name('
 Route::get('/profile/edit/{id}',[UserProfileController::class,'profile_edit'])->name('edit.profile');
 Route::put('/profile/update/{id}',[UserProfileController::class,'profile_update'])->name('profile.update');
 
-
+//login logout register
 Route::post('/do/login',[LoginController::class,'dologin'])->name('dologin');
 Route::get('/logout',[LoginController::class,'logout'])->name('logout');
 Route::get('/register',[LoginController::class,'register'])->name('register');

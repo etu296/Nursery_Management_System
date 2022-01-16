@@ -36,10 +36,9 @@
                     <div class="mega-wrap">
                       <div class="mega-column">
                         <ul class="mega-item mega-features">
-                          <li><a href="{{route('plantlist')}}">Plants</a></li>
-                          <li><a href="product-list.html">Fartilizers</a></li>
-                          <li><a href="product-list.html">Tools</a></li>
-                          <li><a href="product-list.html">Soil</a></li>
+                          @foreach($productCetagory as $product)
+                          <li><a href="{{route('website.product.cetagories',$product->id)}}">{{$product->pcname}}</a></li>
+                          @endforeach
                         </ul>
                       </div>
                       
@@ -51,8 +50,10 @@
                       <ul class="sub-menu">
                         <li class="menu-item-has-children"><a href="{{route('plantlist')}}">Plants</a>
                         <ul class="sub-menu">
-                                <li><a href="{{route('plantdetails')}}">plant Details</a></li>
-                               
+                                <!-- <li><a href="{{route('plantdetails')}}">plant Details</a></li> -->
+                                @foreach($categories as $plant)
+                                <li><a href="product-list.html">{{$plant->C_name}}</a></li>
+                                @endforeach
                               </ul>
                           
                         </li>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\website;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Pcetagory;
+use App\Models\Category;
 use App\Models\ShippingDetail;
 use Illuminate\Http\Request;
 
@@ -27,6 +29,7 @@ class CartController extends Controller
     }
     public function AddCart($id)
     {
+        
         $product=Product::find($id);
         if(!$product)
         {
@@ -80,8 +83,10 @@ class CartController extends Controller
     }
     public function GetCart()
     {
+        $productCetagory=Pcetagory::all();
+        $categories = Category::all();
         $carts=session()->get('cart');
-        return view('website.pages.cart.cart-list',compact('carts'));
+        return view('website.pages.cart.cart-list',compact('carts','productCetagory','categories'));
     }
     public function clearCart()
     {
