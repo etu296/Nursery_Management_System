@@ -52,7 +52,7 @@
                         <ul class="sub-menu">
                                 <!-- <li><a href="{{route('plantdetails')}}">plant Details</a></li> -->
                                 @foreach($categories as $plant)
-                                <li><a href="product-list.html">{{$plant->C_name}}</a></li>
+                                <li><a href="{{route('website.plant.cetagories',$plant->id)}}">{{$plant->C_name}}</a></li>
                                 @endforeach
                               </ul>
                           

@@ -36,6 +36,8 @@ Route::get('/search/products/website',[HomeController::class,'website_Search'])-
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/website/product-view/{id}',[HomeController::class,'product_view'])->name('website.product-view');
 Route::get('/plantlist',[HomeController::class,'plants'])->name('plantlist');
+Route::get('/plant/cetagory/{id}',[HomeController::class,'PlantCetagory'])->name('website.plant.cetagories');
+
 Route::get('/plant/details',[HomeController::class,'plantdetails'])->name('plantdetails');
 Route::get('/plant/care',[HomeController::class,'plantcare'])->name('website.plantcare');
 Route::get('/website/plant-view/{id}',[HomeController::class,'plantview'])->name('website.plant.view');

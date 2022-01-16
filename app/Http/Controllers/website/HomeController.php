@@ -83,4 +83,12 @@ class HomeController extends Controller
         return view('website.pages.product.Cetagory-list',compact('productCetagory','categories'));
    
     }
+    public function PlantCetagory($id)
+    {
+        $productCetagory=Pcetagory::all();
+        $categories = Category::all();
+        $categories = Category::where('id',$id)->get();
+        return view('website.pages.product.Cetagory-list',compact('productCetagory','categories'));
+   
+    }
 }
