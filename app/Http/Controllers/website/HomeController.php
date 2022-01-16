@@ -35,9 +35,10 @@ class HomeController extends Controller
 
     public function plantdetails()
     {
-        
+        $productCetagory=Pcetagory::all();
+        $categories = Category::all();
         $plants=Plant::all();
-        return view('website.pages.plant.plants-detail',compact('plants')); 
+        return view('website.pages.plant.plants-detail',compact('plants','productCetagory','categories')); 
     }
 
     public function product_view($id)
@@ -45,7 +46,7 @@ class HomeController extends Controller
         $productCetagory=Pcetagory::all();
         $categories = Category::all();
         $product=Product::find($id);
-         return view('website.pages.product.productview',compact('product'));
+         return view('website.pages.product.productview',compact('product','productCetagory','categories'));
     }
 
     public function plantcare()
@@ -88,7 +89,7 @@ class HomeController extends Controller
         $productCetagory=Pcetagory::all();
         $categories = Category::all();
         $categories = Category::where('id',$id)->get();
-        return view('website.pages.product.Cetagory-list',compact('productCetagory','categories'));
+        return view('website.pages.plant.plant-Cetagory-list',compact('productCetagory','categories'));
    
     }
 }

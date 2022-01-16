@@ -8,9 +8,7 @@
         <div class="ps-product--detail">
           <div class="row">
                 <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 ">
-                  <div class="ps-product__thumbnail">
-                   
-                      
+                  <div class="ps-product__thumbnail"> 
                       <img  style="width:450px; height:300px;" src="{{url('/uploads/'.$product->product_image)}}" alt="plant image">
                   </div>
                 </div>
@@ -42,7 +40,7 @@
                         <input class="form-control" type="text" value="1"><span class="up"></span><span class="down"></span>
                       </div>
                     </div>
-                    <div class="ps-product__shopping"><a class="ps-btn" href="cart.html">Add To Cart</a>
+                    <div class="ps-product__shopping"><a class="ps-btn" href="{{route('add.to.cart',$product->id)}}">Add To Cart</a>
                       <div class="ps-product__actions"><a class="mr-10" href="whishlist.html"><i class="furniture-heart"></i></a><a href="compare.html" title="Compare"><i class="furniture-reload"></i></a></div>
                     </div>
                     <div class="ps-product__sharing">
