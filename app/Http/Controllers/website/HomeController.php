@@ -88,7 +88,7 @@ class HomeController extends Controller
     {
         $productCetagory=Pcetagory::all();
         $categories = Category::all();
-        $categories = Category::where('id',$id)->get();
+        $categories = Plant::where('category_id',$id)->get();
         return view('website.pages.plant.plant-Cetagory-list',compact('productCetagory','categories'));
    
     }
