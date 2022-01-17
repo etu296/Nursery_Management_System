@@ -91,6 +91,7 @@
 											<div class="panel-body">
 												<table class="cart-summary table table-bordered">
 													<thead>
+													
 														<tr>
 															<th class="width-80 text-center">Image</th>
 															<th>Name</th>
@@ -102,44 +103,29 @@
 													
 													<tbody>
 														<tr>
+														@if($carts)
+                                                          @foreach($carts as $key=>$data)
 															<td>
 																<a href="product-detail-left-sidebar.html">
-																	<img width="80" alt="Product Image" class="img-responsive" src="img/product/19.jpg">
+																<img  style="width:70px; height:70px;" src="{{url('/uploads/'.$data['product_img'])}}" alt="plant image">
 																</a>
 															</td>
 															<td>
-																<a href="product-detail-left-sidebar.html" class="product-name">Organic Strawberry Fruits</a>
+																<a href="product-detail-left-sidebar.html" class="product-name">{{$data['product_name']}}</a>
 															</td>
 															<td class="text-center">
-																$265
+															{{$data['product_price']}}
 															</td>
 															<td class="text-center">
-																1
+															{{$data['product_qty']}}
 															</td>
 															<td class="text-center">
-																$265
+															{{$data['product_price'] * $data['product_qty']}}
 															</td>
 														</tr>
+														@endforeach
+                                                       @endif
 														
-														<tr>
-															<td>
-																<a href="product-detail-left-sidebar.html">
-																	<img width="80" alt="Product Image" class="img-responsive" src="img/product/31.jpg">
-																</a>
-															</td>
-															<td>
-																<a href="product-detail-left-sidebar.html" class="product-name">Organic Strawberry Fruits</a>
-															</td>
-															<td class="text-center">
-																$150
-															</td>
-															<td class="text-center">
-																2
-															</td>
-															<td class="text-center">
-																$300
-															</td>
-														</tr>
 													</tbody>
 												</table>
 

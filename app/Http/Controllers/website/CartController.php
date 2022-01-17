@@ -13,7 +13,11 @@ class CartController extends Controller
 {
     public function checkouttlist()
     {
-        return view('website.pages.cart.checkout-list');
+        $productCetagory=Pcetagory::all();
+        $categories = Category::all();
+        $carts=session()->get('cart');
+
+        return view('website.pages.cart.checkout-list',compact('productCetagory','categories','carts'));
     }
     public function shipping_address(Request $request)
     {

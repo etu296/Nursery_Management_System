@@ -34,7 +34,7 @@
     <label for="exampleInputEmail1" class="form-label">Plant Category</label>
     <select name="category" class="form-control" id="exampleFormControlSelect1">
                 @foreach($categories as $category)
-            <option value="{{$category->id}}">{{$category->id}}</option>
+            <option value="{{$category->id}}">{{$category->C_name}}</option>
             @endforeach
             </select>
   </div>
