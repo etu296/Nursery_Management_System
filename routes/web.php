@@ -63,6 +63,8 @@ Route::post('/contact/store',[HomepageContactController::class,'contactstore'])-
 
 //cart
 Route::get('/checkout',[CartController::class,'checkouttlist'])->name('website.checkout');
+Route::get('/website/payemnt/recipt',[CartController::class,'Reportlist'])->name('website.payemnt.recipt');
+
 //shipping details
 Route::post('/shipping/address/save',[CartController::class,'shipping_address'])->name('shipping.details.store');
 

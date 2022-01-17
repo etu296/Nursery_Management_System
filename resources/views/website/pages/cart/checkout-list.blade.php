@@ -173,9 +173,9 @@
 									</div>
 								</div>
 
-								<div class="pull-right">
-									<input type="submit" value="Place Order" name="proceed" class="btn btn-primary">
-								</div>
+								
+									<a href="{{route('website.payemnt.recipt')}}" class="btn btn-primary">Place Order</a>
+								
 							</div>
 							
 							<div class="checkout-right col-lg-3 col-md-3 col-sm-3 col-xs-12">

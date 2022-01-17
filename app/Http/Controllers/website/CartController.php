@@ -97,5 +97,9 @@ class CartController extends Controller
         session()->forget('cart');
         return redirect()->back()->with('msg','Cart cleared successfully.');
     }
+    public function Reportlist()
+    {
+        return view('website.pages.cart.payment-recipt');
+    }
 
 }
