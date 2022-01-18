@@ -11,7 +11,7 @@
         </div>
       </div>
 <p style="text-align:right;">
-<a href="{{route('productcreate')}}" class="btn btn-danger">Create Product</a>
+<a href="{{route('productcreate')}}" class="btn btn-danger"><i class="fas fa-plus"></i> Add Product</a>
 </p>
 
 <table class="table table-dark">

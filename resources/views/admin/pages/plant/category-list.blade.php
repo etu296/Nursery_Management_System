@@ -3,7 +3,7 @@
 @section('content')
 <h1>Category</h1>
 <p style="text-align: left;">
-<a href="/admin/categories/createcategory" class="btn btn-danger">Create Category List</a>
+<a href="/admin/categories/createcategory" class="btn btn-danger"><i class="fas fa-plus"></i> Add plant Category</a>
 </p>
 <table class="table table-success table-striped ">
   <thead>

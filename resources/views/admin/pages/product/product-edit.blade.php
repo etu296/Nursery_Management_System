@@ -37,11 +37,13 @@
             </select>
   </div>
 
-  <!-- <div class="mb-3">
+  <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label"> Product Image</label>
     <input  name="product_image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div> -->
-  
+    <img src="{{url('/uploads/'.$product->product_image)}}" width="60px" alt="product image">
+
+  </div>
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @endsection

@@ -89,6 +89,16 @@ class ProductController extends Controller
   public function product_update(Request $request,$id)
   {
     $product=Product::find($id);
+    $productimage=$product;
+    if ($request->hasFile('product_image'))
+           {
+            // step 2: generate file name
+            $productimage = date('Ymdhms').'.'.$request->file('product_image')->getClientOriginalExtension();
+            //step 3 : store into project directory
+            $request->file('product_image')->storeAs('/uploads',$productimage);
+
+              
+           }
     if($product)
     {
       $product->update([
@@ -97,6 +107,7 @@ class ProductController extends Controller
         'products_details'=>$request->products_details,
         'product_cetagory'=>$request->product_cetagory,
         'plant_cetagory'=>$request->plant_cetagory,
+        'product_image'=>$productimage
       ]);
       return redirect()->back()->with('msg', 'Product Updated Successfully.');
     }

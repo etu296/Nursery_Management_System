@@ -30,10 +30,12 @@
             @endforeach
             </select>
   </div>
-  <!-- <div class="mb-3">
+  <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Image</label>
     <input  name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div> -->
+    <img src="{{url('/uploads/'.$plant->image)}}" width="100px" alt="plant image">
+
+  </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

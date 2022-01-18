@@ -11,7 +11,7 @@
         </div>
       </div>
 <p style="text-align:right;">
-<a href="/admin/plants/createplants" class="btn btn-success">Create Plant List</a>
+<a href="/admin/plants/createplants" class="btn btn-success"><i class="fas fa-plus"></i> Add Plant</a>
 </p>
 <table class="table table-dark">
   <thead>

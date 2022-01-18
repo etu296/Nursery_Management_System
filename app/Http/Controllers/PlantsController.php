@@ -76,7 +76,18 @@ class PlantsController extends Controller
     }
     public function plant_update(Request $request,$id)
     {
+      
       $plant=Plant::find($id);
+      $plantimage=$plant->image;
+      if ($request->hasFile('image'))
+           {
+            // step 2: generate file name
+            $plantimage = date('Ymdhms').'.'.$request->file('image')->getClientOriginalExtension();
+            //step 3 : store into project directory
+            $request->file('image')->storeAs('/uploads',$plantimage);
+
+              
+           }
       if($plant)
       {
         $plant->update([
@@ -85,6 +96,7 @@ class PlantsController extends Controller
           'quantity'=>$request->quantity,
           'discription'=>$request->discription,
           'category_id'=>$request->category,
+          'image'=>$plantimage
         ]);
         return redirect()->back()->with('msg', 'Plant Updated Successfully.');
       }

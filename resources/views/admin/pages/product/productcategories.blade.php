@@ -3,7 +3,7 @@
 @section('content')
 <h1>Product Category</h1>
 <p style="text-align: left;">
-<a href="{{route('productcreatecategory')}}" class="btn btn-danger">Create Product Category </a>
+<a href="{{route('productcreatecategory')}}" class="btn btn-danger"><i class="fas fa-plus"></i> Add Product Category </a>
 </p>
 <table class="table table-success table-striped ">
   <thead>
