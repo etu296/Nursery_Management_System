@@ -28,9 +28,10 @@ class HomeController extends Controller
   
     public function about()
     {
-       
+        $productCetagory=Pcetagory::all();
+        $categories = Category::all();
         // $plants=Plant::all();
-        return view('website.pages.about');
+        return view('website.pages.about',compact('productCetagory','categories'));
     }
 
     public function plantdetails()
@@ -51,8 +52,9 @@ class HomeController extends Controller
 
     public function plantcare()
     {
-        
-        return view('website.pages.plant.plant-care');
+        $productCetagory=Pcetagory::all();
+        $categories = Category::all();
+        return view('website.pages.plant.plant-care',compact('productCetagory','categories'));
     }
     public function product()
     {
