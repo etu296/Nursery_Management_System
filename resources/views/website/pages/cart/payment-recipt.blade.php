@@ -7,19 +7,26 @@
     margin-top: 20px;
 }
 </style>
+<div id="PrintTableArea">
 <div class="container">
     <div class="row">
         <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
             <div class="row">
+            
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <address>
-                        <strong>Elf Cafe</strong>
+
+                     
+                        <strong>{{auth()->user()->name}}</strong>
                         <br>
-                        2135 Sunset Blvd
+                        {{auth()->user()->email}}
                         <br>
-                        Los Angeles, CA 90026
+                        {{auth()->user()->number}}
                         <br>
-                        <abbr title="Phone">P:</abbr> (213) 484-6829
+                        Flourish Store
+                        <br>
+                        Uttara Sector 10, Rode 13
+                        <br>
                     </address>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 text-right">
@@ -40,30 +47,22 @@
                     <thead>
                         <tr>
                             <th>Product</th>
-                            <th>#</th>
+                            <th>Quantity</th>
                             <th class="text-center">Price</th>
                             <th class="text-center">Total</th>
                         </tr>
                     </thead>
                     <tbody>
+                    @if($carts)
+                         @foreach($carts as $key=>$data)
                         <tr>
-                            <td class="col-md-9"><em>Baked Rodopa Sheep Feta</em></h4></td>
-                            <td class="col-md-1" style="text-align: center"> 2 </td>
-                            <td class="col-md-1 text-center">$13</td>
-                            <td class="col-md-1 text-center">$26</td>
+                            <td class="col-md-9"><em>{{$data['product_name']}}</em></h4></td>
+                            <td class="col-md-1" style="text-align: center"> {{$data['product_qty']}} </td>
+                            <td class="col-md-1 text-center">{{$data['product_price']}}</td>
+                            <td class="col-md-1 text-center">{{$data['product_price'] * $data['product_qty']}}</td>
                         </tr>
-                        <tr>
-                            <td class="col-md-9"><em>Lebanese Cabbage Salad</em></h4></td>
-                            <td class="col-md-1" style="text-align: center"> 1 </td>
-                            <td class="col-md-1 text-center">$8</td>
-                            <td class="col-md-1 text-center">$8</td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-9"><em>Baked Tart with Thyme and Garlic</em></h4></td>
-                            <td class="col-md-1" style="text-align: center"> 3 </td>
-                            <td class="col-md-1 text-center">$16</td>
-                            <td class="col-md-1 text-center">$48</td>
-                        </tr>
+                        @endforeach
+                        @endif
                         <tr>
                             <td>   </td>
                             <td>   </td>
@@ -88,11 +87,22 @@
                             <td class="text-right"><h4><strong>Total: </strong></h4></td>
                             <td class="text-center text-danger"><h4><strong>$31.53</strong></h4></td>
                         </tr>
+                       
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-success btn-lg btn-block">
-                    Pay Now   <span class="glyphicon glyphicon-chevron-right"></span>
-                </button></td>
+                </div>
+                <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print Receipt</a>
+
+              
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>

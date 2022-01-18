@@ -99,7 +99,8 @@ class CartController extends Controller
     }
     public function Reportlist()
     {
-        return view('website.pages.cart.payment-recipt');
+        $carts=session()->get('cart');
+        return view('website.pages.cart.payment-recipt',compact('carts'));
     }
 
 }
