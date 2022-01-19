@@ -101,6 +101,7 @@ class ProductController extends Controller
            }
     if($product)
     {
+      //dd($product);
       $product->update([
         'product_name'=>$request->product_name,
         'product_price'=>$request->product_price,

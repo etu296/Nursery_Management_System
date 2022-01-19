@@ -101,7 +101,7 @@
             <a href="{{route('admin.customer')}}" class="nav-link">
             <i class="fas fa-users"></i>
               <p>
-              Customer
+              Users
                 
               </p>
             </a>

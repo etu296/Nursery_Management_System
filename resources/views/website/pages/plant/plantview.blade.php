@@ -17,13 +17,6 @@
                 <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 ">
                   <div class="ps-product__info">
                     <div class="ps-product__rating">
-                      <select class="ps-rating">
-                        <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="2">5</option>
-                      </select><a href="#">(Read all 8 reviews)</a>
                     </div>
                     <h1>{{$plants->name}}</h1>
                     <p class="ps-product__category"><a href="#">  {{$plants->name}}</a></p>

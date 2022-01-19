@@ -16,13 +16,7 @@
 						<img  src="{{url('/uploads/'.$plant->image)}}" width="200px" height="200px" alt="plant image">
 					<a class="ps-product__overlay" href="product-detail.html"></a>
                       <div class="ps-product__content full">
-                            <select class="ps-rating">
-                              <option value="1">1</option>
-                              <option value="1">2</option>
-                              <option value="1">3</option>
-                              <option value="1">4</option>
-                              <option value="2">5</option>
-                            </select><a class="ps-product__title" href="product-detail-2.html">{{$plant->name}}</a>
+                            <a class="ps-product__title" href="product-detail-2.html">{{$plant->name}}</a>
                         <div class="ps-product__categories"><a href="product-listing.html">{{$plant->name}}</a></div>
                         <p class="ps-product__price">
                           BDT {{$plant->price}}
@@ -32,13 +26,7 @@
                       </div>
                     </div>
                     <div class="ps-product__content">
-                          <select class="ps-rating">
-                            <option value="1">1</option>
-                            <option value="1">2</option>
-                            <option value="1">3</option>
-                            <option value="1">4</option>
-                            <option value="2">5</option>
-                          </select><a class="ps-product__title" href="product-detail-2.html">{{$plant->name}}</a>
+                          <a class="ps-product__title" href="product-detail-2.html">{{$plant->name}}</a>
                       <div class="ps-product__categories"><a href="product-listing.html">{{$plant->name}}</a></div>
                       <p class="ps-product__price">
                         BDT {{$plant->price}}

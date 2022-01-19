@@ -8,10 +8,10 @@
 <table class="table table-success table-striped ">
   <thead>
     <tr>
-     <th scope="col">Customer Id</th>
-      <th scope="col">Customer Name</th>
-      <th scope="col">Customer Mobile Number </th>
-      <th scope="col">Customer Email</th>
+     <th scope="col">User Id</th>
+      <th scope="col">User Name</th>
+      <th scope="col">User Mobile Number </th>
+      <th scope="col">User Email</th>
      
     </tr>
   </thead>

@@ -23,7 +23,7 @@
     <label for="exampleInputEmail1" class="form-label">Product Cetagory</label>
     <select name="product_cetagory" class="form-control" id="exampleFormControlSelect1">
     @foreach ($pcetagories as $pcetagory)
-            <option value="{{$pcetagory->id}}">{{$pcetagory->id}}</option>
+            <option value="{{$pcetagory->id}}">{{$pcetagory->pcname}}</option>
             @endforeach
             </select>
   </div>
