@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Pcetagory;
 use App\Models\Category;
+use App\Models\Order;
+use App\Models\Orderdetail;
 use App\Models\ShippingDetail;
 use Illuminate\Http\Request;
 
@@ -13,11 +15,30 @@ class CartController extends Controller
 {
     public function checkouttlist()
     {
-        $productCetagory=Pcetagory::all();
-        $categories = Category::all();
         $carts=session()->get('cart');
-
-        return view('website.pages.cart.checkout-list',compact('productCetagory','categories','carts'));
+        if($carts)
+        {
+            $order=Order::create([
+                'user_id'=>auth()->user()->id,
+                'total_price'=>array_sum(array_column($carts,'product_price')),
+            ]);
+        
+      
+        foreach ($carts as $cart)
+            {
+                Orderdetail::create([
+                    'order_id'=> $order->id,
+                    'product_id'=>$cart['product_id'],
+                    'unit_price'=>$cart['product_price'],
+                    'quantity'=>$cart['product_qty'],
+                    'sub_total'=>$cart['product_qty'] * $cart['product_price'] ,
+                ]);
+               
+            }
+            session()->forget('cart');
+            return redirect()->back()->with('msg','Order Placed Successfully.');
+        }
+        return redirect()->back()->with('error','No Data found in cart.');
     }
     public function shipping_address(Request $request)
     {

@@ -6,7 +6,7 @@
  <div class="col-lg-3 col-6">
             <div class="small-box bg-danger">
               <div class="inner">
-                <h4>Product</sup></h4>
+                <h4>{{$count['product']}}</sup></h4>
 
                 <p>Products</p>
               </div>
@@ -21,7 +21,7 @@
     <div  class="small-box bg-success">
    
               <div class="inner">
-                <h4>Plant</h4>
+                <h4>{{$count['plant']}}</h4>
 
                 <p>Plants</p>
               </div>
@@ -35,7 +35,7 @@
   <div class="col-lg-3 col-6">
   <div class="small-box bg-warning">
               <div class="inner">
-                <h4>Order</sup></h3>
+                <h4>{{$count['order']}}</sup></h3>
 
                 <p>Order</p>
               </div>
@@ -49,7 +49,7 @@
   <div class="col-lg-3 col-6">
   <div class="small-box bg-info">
               <div class="inner">
-                <h4>Payment</h4>
+                <h4>{{$count['payment']}}</h4>
 
                 <p>Payment</p>
               </div>
@@ -64,7 +64,7 @@
   <div class="col-lg-3 col-6">
   <div class="small-box bg-primary">
               <div class="inner">
-                <h4>Customer</h4>
+                <h4>{{$count['user']}}</h4>
 
                 <p>Customer</p>
               </div>
@@ -78,7 +78,7 @@
           <div class="col-lg-3 col-6">
   <div class="small-box bg-danger">
               <div class="inner">
-                <h4>Message</h4>
+                <h4>{{$count['message']}}</h4>
 
                 <p>Message</p>
               </div>
@@ -92,7 +92,7 @@
   <div class="col-lg-3 col-6">
   <div class="small-box bg-secondary">
               <div class="inner">
-                <h4>Delivery</h4>
+                <h4>{{$count['delivery']}}</h4>
 
                 <p>Delivery</p>
               </div>
@@ -106,7 +106,7 @@
           <div class="col-lg-3 col-6">
           <div class="small-box bg-success">
               <div class="inner">
-                <h4>Shipping</h4>
+                <h4>{{$count['shipping']}}</h4>
 
                 <p>Shipping Details</p>
               </div>

@@ -94,15 +94,15 @@ Route::get('/products',[ProductController::class,'productlist'])->name('productl
 Route::get('/productcetagories',[ProductController::class,'categorylist'])->name('productcategories');
 Route::get('/product/createcategory',[ProductController::class,'productcategory'])->name('productcreatecategory');
 Route::post('/productcetagorystore',[ProductController::class,'pceragorystore'])->name('produccetagorytstore');
- Route::post('/products/store',[ProductController::class,'productstore'])->name('productstore');
- Route::get('/createproducts',[ProductController::class,'createproduct'])->name('productcreate');
+Route::post('/products/store',[ProductController::class,'productstore'])->name('productstore');
+Route::get('/createproducts',[ProductController::class,'createproduct'])->name('productcreate');
  //view delete product
- Route::get('/Product/view/{product_id}',[ProductController::class,'product_view'])->name('admin.product.view');
- Route::get('/Product/delete/{product_id}',[ProductController::class,'product_delete'])->name('admin.product.delete');
+Route::get('/Product/view/{product_id}',[ProductController::class,'product_view'])->name('admin.product.view');
+Route::get('/Product/delete/{product_id}',[ProductController::class,'product_delete'])->name('admin.product.delete');
  //edit product
- Route::get('/product/edit/{product_id}',[ProductController::class,'product_edit'])->name('admin.product.edit');
+Route::get('/product/edit/{product_id}',[ProductController::class,'product_edit'])->name('admin.product.edit');
  //update product
- Route::put('/product/update/,{product_id}',[ProductController::class,'product_update'])->name('admin.product.update');
+Route::put('/product/update/,{product_id}',[ProductController::class,'product_update'])->name('admin.product.update');
 //product search & print
 Route::get('/search/products',[ProductController::class,'productSearch'])->name('product.search');
 //plants
@@ -124,8 +124,7 @@ Route::post('/Categories/store',[CategoryController::class,'store'])->name('Cate
 Route::get('/search/plantss',[PlantsController::class,'planttSearch'])->name('plant.search');
 //orders
 Route::get('/orders',[OrderController::class,'orderlist'])->name('admin.orders');
-Route::post('/orders/store',[OrderController::class,'store'])->name('orderstore');
-Route::get('/orders/createorder',[OrderController::class,'createorder'])->name('admin.orders.createorder');
+Route::get('/cancle/order/{id}',[OrderController::class,'CancelOrder'])->name('admin.order.cancel');
 //payments
 Route::get('/payments',[PaymentController::class,'paymentlist'])->name('admin.payments');
 Route::post('/payments/store',[PaymentController::class,'store'])->name('paymentstore');

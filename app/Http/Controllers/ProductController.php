@@ -95,9 +95,7 @@ class ProductController extends Controller
             // step 2: generate file name
             $productimage = date('Ymdhms').'.'.$request->file('product_image')->getClientOriginalExtension();
             //step 3 : store into project directory
-            $request->file('product_image')->storeAs('/uploads',$productimage);
-
-              
+            $request->file('product_image')->storeAs('/uploads',$productimage);           
            }
     if($product)
     {
@@ -106,8 +104,8 @@ class ProductController extends Controller
         'product_name'=>$request->product_name,
         'product_price'=>$request->product_price,
         'products_details'=>$request->products_details,
-        'product_cetagory'=>$request->product_cetagory,
-        'plant_cetagory'=>$request->plant_cetagory,
+        'product_cetagory_id'=>$request->product_cetagory,
+        'plant_cetagory_id'=>$request->plant_cetagory,
         'product_image'=>$productimage
       ]);
       return redirect()->back()->with('msg', 'Product Updated Successfully.');

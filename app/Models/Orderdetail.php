@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Orderdetail extends Model
 {
     use HasFactory;
-    protected $guarded=[];
-    public function order()
+    protected $guarded = [];
+    public function user()
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsTo(User::class);
     }
 }

@@ -97,6 +97,9 @@
     @if(session()->has('error'))
 <p class="alert alert-danger">{{session()->get('error')}}</p>
 @endif
+@if(session()->has('msg'))
+<p class="alert alert-success">{{session()->get('msg')}}</p>
+@endif
     
     <style type="text/css">
 .bgimg {
