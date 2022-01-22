@@ -28,14 +28,14 @@
                                                 <div class="form-group">
 														<div class="col-md-12">
 															<label>Name </label>
-															<input type="text" name="name" class="form-control">
+															<input required type="text" name="name" class="form-control">
 														</div>
 													</div>
 
 													<div class="form-group">
 														<div class="col-md-12">
 															<label>City</label>
-															<select name="city" class="form-control">
+															<select required name="city" class="form-control">
                                                             <option value="">Select a city</option>
                                                                 <option value="Bangladesh">Dhaka</option>
 																<option value="Maymensing">Maymensing</option>
@@ -46,7 +46,7 @@
                                                     <div class="form-group">
 														<div class="col-md-12">
 															<label>Area</label>
-															<select name="area" class="form-control">
+															<select required name="area" class="form-control">
 																<option value="">Select Area</option>
                                                                 <option value="Uttara">Uttara</option>
 																<option value="Gazipur">Gazipur</option>
@@ -59,19 +59,19 @@
 													<div class="form-group">
 														<div class="col-md-12">
 															<label>Address </label>
-															<input name="address" type="text" value="" class="form-control">
+															<input required name="address" type="text" value="" class="form-control">
 														</div>
 													</div>
                                                     <div class="form-group">
 														<div class="col-md-12">
 															<label>Mobile </label>
-															<input name="mobile" type="number" value="" class="form-control">
+															<input required name="mobile" type="number" value="" class="form-control">
 														</div>
 													</div>
 													
 													<div class="form-group">
 														<div class="col-md-12">
-															<input type="submit" value="Save" class="btn btn-success">
+															<input required type="submit" value="Save" class="btn btn-success">
 														</div>
 													</div>
 												</form>
@@ -137,7 +137,6 @@
 																Cart Subtotal
 															</th>
 															<td class="total">
-																$431
 															</td>
 														</tr>
 														<tr>
@@ -153,7 +152,6 @@
 																<strong>Order Total</strong>
 															</th>
 															<td class="total">
-																$431
 															</td>
 														</tr>
 													</tbody>
@@ -162,19 +160,18 @@
 												<h4 class="heading-primary">Payment</h4>
 												<form action="#" method="post">
 													<div class="item">
-														<input type="checkbox">Pay by bank wire (order processing will be longer)
+														<input type="checkbox">Cash On Delivery
 													</div>
-													<div class="item">
-														<input type="checkbox">Pay by check (order processing will be longer)
-													</div>
+													
 												</form>
+												
 											</div>
 										</div>
 									</div>
 								</div>
 
 								
-									<a href="{{route('website.payemnt.recipt')}}" class="btn btn-primary">Place Order</a>
+									<a href="{{route('website.place.order')}}" class="btn btn-primary">Place Order</a>
 								
 							</div>
 							

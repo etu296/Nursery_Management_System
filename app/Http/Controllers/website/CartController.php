@@ -15,33 +15,20 @@ class CartController extends Controller
 {
     public function checkouttlist()
     {
+        $productCetagory=Pcetagory::all();
+        $categories = Category::all();
         $carts=session()->get('cart');
-        if($carts)
-        {
-            $order=Order::create([
-                'user_id'=>auth()->user()->id,
-                'total_price'=>array_sum(array_column($carts,'product_price')),
-            ]);
-        
-      
-        foreach ($carts as $cart)
-            {
-                Orderdetail::create([
-                    'order_id'=> $order->id,
-                    'product_id'=>$cart['product_id'],
-                    'unit_price'=>$cart['product_price'],
-                    'quantity'=>$cart['product_qty'],
-                    'sub_total'=>$cart['product_qty'] * $cart['product_price'] ,
-                ]);
-               
-            }
-            session()->forget('cart');
-            return redirect()->back()->with('msg','Order Placed Successfully.');
-        }
-        return redirect()->back()->with('error','No Data found in cart.');
+        return view('website.pages.cart.checkout-list',compact('carts','productCetagory','categories'));   
     }
     public function shipping_address(Request $request)
     {
+        $request->validate([
+            'name'=>'required',
+            'city'=>'required',
+            'area'=>'required',
+            'address'=>'required',
+            'mobile'=>'required|numeric|digits:11',
+        ]);
         ShippingDetail::create
         ([
             'name'=>$request->name,
@@ -118,10 +105,32 @@ class CartController extends Controller
         session()->forget('cart');
         return redirect()->back()->with('msg','Cart cleared successfully.');
     }
-    public function Reportlist()
+    public function PlaceOrder()
     {
         $carts=session()->get('cart');
-        return view('website.pages.cart.payment-recipt',compact('carts'));
+        if($carts)
+        {
+            $order=Order::create([
+                'user_id'=>auth()->user()->id,
+                'total_price'=>array_sum(array_column($carts,'product_price')),
+            ]);
+        
+      
+        foreach ($carts as $cart)
+            {
+                Orderdetail::create([
+                    'order_id'=> $order->id,
+                    'product_id'=>$cart['product_id'],
+                    'unit_price'=>$cart['product_price'],
+                    'quantity'=>$cart['product_qty'],
+                    'sub_total'=>$cart['product_qty'] * $cart['product_price'] ,
+                ]);
+               
+            }
+            session()->forget('cart');
+            return redirect()->back()->with('msg','Order Placed Successfully.');
+        }
+        return redirect()->back()->with('error','No Data found in cart.');
     }
 
 }

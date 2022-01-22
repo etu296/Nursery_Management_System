@@ -35,9 +35,9 @@ Route::get('/product',[HomeController::class,'product'])->name('product');
 Route::get('/search/products/website',[HomeController::class,'website_Search'])->name('website.product.search');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/website/product-view/{id}',[HomeController::class,'product_view'])->name('website.product-view');
+//website plant
 Route::get('/plantlist',[HomeController::class,'plants'])->name('plantlist');
 Route::get('/plant/cetagory/{id}',[HomeController::class,'PlantCetagory'])->name('website.plant.cetagories');
-
 Route::get('/plant/details',[HomeController::class,'plantdetails'])->name('plantdetails');
 Route::get('/plant/care',[HomeController::class,'plantcare'])->name('website.plantcare');
 Route::get('/website/plant-view/{id}',[HomeController::class,'plantview'])->name('website.plant.view');
@@ -63,7 +63,7 @@ Route::post('/contact/store',[HomepageContactController::class,'contactstore'])-
 
 //cart
 Route::get('/checkout',[CartController::class,'checkouttlist'])->name('website.checkout');
-Route::get('/website/payemnt/recipt',[CartController::class,'Reportlist'])->name('website.payemnt.recipt');
+Route::get('/place/order',[CartController::class,'PlaceOrder'])->name('website.place.order');
 
 //shipping details
 Route::post('/shipping/address/save',[CartController::class,'shipping_address'])->name('shipping.details.store');
