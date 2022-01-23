@@ -1,35 +1,4 @@
-<!-- <h1>created</h1>
-<div class="container">
-					<div class="login-page">
-						<div class="login-form form">
-							<div class="block-title">
-								<h2 class="title"><span>Login</span></h2>
-							</div>
-						
-							<form action="{{route('do.admin.login')}}" method="post" >
-								@csrf
-								<div class="form-group">
-									<label>Email</label>
-									<input type="email" value="" name="email">
-								</div>
-								
-								<div class="form-group">
-									<label>Password</label>
-									<input type="password" value="" name="password">
-								</div>
-								
-								
-								
-								<div class="form-group text-center">
-									<input type="submit" class="btn btn-primary" value="Sign In">
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div> -->
-			
-			<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

@@ -102,7 +102,7 @@ Route::get('/Product/delete/{product_id}',[ProductController::class,'product_del
  //edit product
 Route::get('/product/edit/{product_id}',[ProductController::class,'product_edit'])->name('admin.product.edit');
  //update product
-Route::put('/product/update/,{product_id}',[ProductController::class,'product_update'])->name('admin.product.update');
+Route::put('/product/update/{product_id}',[ProductController::class,'product_update'])->name('admin.product.update');
 //product search & print
 Route::get('/search/products',[ProductController::class,'productSearch'])->name('product.search');
 //plants
@@ -112,18 +112,19 @@ Route::get('/plants/createplants',[PlantsController::class,'createplants'])->nam
 //plantcategory
 Route::get('/cetagories',[CategoryController::class,'categorylist'])->name('admin.plantcategories');
 Route::post('/Categories/store',[CategoryController::class,'store'])->name('Categorystore');
- Route::get('/categories/createcategory',[CategoryController::class,'createcategory'])->name('admin.plants.createcategory');
+Route::get('/categories/createcategory',[CategoryController::class,'createcategory'])->name('admin.plants.createcategory');
   //view delete plants
-  Route::get('/Plant/view/{plant_id}',[PlantsController::class,'plant_view'])->name('plant_view');
-  Route::get('/Plant/delete/{plant_id}',[PlantsController::class,'plant_delete'])->name('plant_delete');
+Route::get('/Plant/view/{plant_id}',[PlantsController::class,'plant_view'])->name('plant_view');
+Route::get('/Plant/delete/{plant_id}',[PlantsController::class,'plant_delete'])->name('plant_delete');
   //edit plant
- Route::get('/plant/edit/{plant_id}',[PlantsController::class,'plant_edit'])->name('admin.plant.edit');
+Route::get('/plant/edit/{plant_id}',[PlantsController::class,'plant_edit'])->name('admin.plant.edit');
  //update plant
- Route::put('/plant/update/,{plant_id}',[PlantsController::class,'plant_update'])->name('admin.plant.update');
+Route::put('/plant/update/,{plant_id}',[PlantsController::class,'plant_update'])->name('admin.plant.update');
  //plant search & print
 Route::get('/search/plantss',[PlantsController::class,'planttSearch'])->name('plant.search');
 //orders
 Route::get('/orders',[OrderController::class,'orderlist'])->name('admin.orders');
+Route::get('/order/details',[OrderController::class,'OrderDetails'])->name('admin.order.details');
 Route::get('/cancle/order/{id}',[OrderController::class,'CancelOrder'])->name('admin.order.cancel');
 //payments
 Route::get('/payments',[PaymentController::class,'paymentlist'])->name('admin.payments');

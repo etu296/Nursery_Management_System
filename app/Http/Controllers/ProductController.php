@@ -88,8 +88,10 @@ class ProductController extends Controller
   }
   public function product_update(Request $request,$id)
   {
+    // dd($request->all());
     $product=Product::find($id);
-    $productimage=$product;
+    // dd($product);
+    $productimage=$product->product_image;
     if ($request->hasFile('product_image'))
            {
             // step 2: generate file name
@@ -104,8 +106,8 @@ class ProductController extends Controller
         'product_name'=>$request->product_name,
         'product_price'=>$request->product_price,
         'products_details'=>$request->products_details,
-        'product_cetagory_id'=>$request->product_cetagory,
-        'plant_cetagory_id'=>$request->plant_cetagory,
+        'product_cetagory'=>$request->product_cetagory,
+        'plant_cetagory'=>$request->plant_cetagory,
         'product_image'=>$productimage
       ]);
       return redirect()->back()->with('msg', 'Product Updated Successfully.');

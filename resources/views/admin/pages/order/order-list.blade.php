@@ -9,9 +9,9 @@
       
     <th scope="col">Order Id</th>
     <th scope="col">User Name</th>
-        <th scope="col">Total Price</th>
-        <th scope="col">Status</th>
-        <th scope="col">Action</th>
+    <th scope="col">Total Price</th>
+    <th scope="col">Status</th>
+    <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>

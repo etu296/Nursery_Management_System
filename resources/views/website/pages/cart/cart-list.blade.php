@@ -26,8 +26,8 @@
 													</thead>
 													
 													<tbody>
-                          @if($carts)
-                             @foreach($carts as $key=>$data)
+                                                   @if($carts)
+                                                   @foreach($carts as $key=>$data)
 														<tr>
 															<td>
 																<a href="product-detail-left-sidebar.html">
@@ -47,8 +47,8 @@
 															{{$data['product_price'] * $data['product_qty']}}
 															</td>
 														</tr>
-														@endforeach
-                            @endif
+													@endforeach
+                                                    @endif
 														
 													</tbody>
 												</table>
@@ -96,8 +96,6 @@
 											</div>
 										</div>
 									</div>
-              
-              
 
             </div>
 

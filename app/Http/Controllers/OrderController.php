@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Orderdetail;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -12,13 +13,12 @@ class OrderController extends Controller
         $orders=Order::with('user')->get();
         return view('admin.pages.order.order-list',compact('orders'));
     }
-    
-    public function createorder()
+    public function OrderDetails()
     {
-        return view('admin.pages.order.createorder-list');
-    }
+        $orders=Orderdetail::with('order','product')->get();
 
-    
+        return view('admin.pages.order.order-details',compact('orders'));
+    }
     public function CancelOrder($id)
     {
         $order=Order::find($id);

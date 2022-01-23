@@ -9,8 +9,12 @@ class Orderdetail extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public function user()
+    public function order()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Order::class);
+    }
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
     }
 }
