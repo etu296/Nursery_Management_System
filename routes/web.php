@@ -61,20 +61,21 @@ Route::post('/register/store',[LoginController::class,'registerstore'])->name('r
 Route::get('/contact/list',[HomepageContactController::class,'homecontactlist'])->name('home.contact');
 Route::post('/contact/store',[HomepageContactController::class,'contactstore'])->name('contactStore');
 
-//cart
-Route::get('/checkout',[CartController::class,'checkouttlist'])->name('website.checkout');
-Route::get('/place/order',[CartController::class,'PlaceOrder'])->name('website.place.order');
 
-//shipping details
-Route::post('/shipping/address/save',[CartController::class,'shipping_address'])->name('shipping.details.store');
+
 
 // Route::get('/', function () {
 //      return view('website.pages.home');
 // });
 Route::group(['middleware'=>['web_auth']],function(){
-     Route::get('/add/cart/{id}',[CartController::class,'AddCart'])->name('add.to.cart');
-     Route::get('/get/cart/',[CartController::class,'GetCart'])->name('get.cart');
-     Route::get('/clear/cart/',[CartController::class,'clearCart'])->name('clear.cart');
+Route::get('/add/cart/{id}',[CartController::class,'AddCart'])->name('add.to.cart');
+Route::get('/get/cart/',[CartController::class,'GetCart'])->name('get.cart');
+Route::get('/clear/cart/',[CartController::class,'clearCart'])->name('clear.cart');
+//cart
+Route::get('/checkout',[CartController::class,'checkouttlist'])->name('website.checkout');
+Route::get('/place/order',[CartController::class,'PlaceOrder'])->name('website.place.order');
+//shipping details
+Route::post('/shipping/address/save',[CartController::class,'shipping_address'])->name('shipping.details.store');
 
      });
 

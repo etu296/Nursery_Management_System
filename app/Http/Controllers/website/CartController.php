@@ -38,6 +38,7 @@ class CartController extends Controller
             'mobile'=>$request->mobile,
         ]);
         return redirect()->back()->with('msg','Shiping Address Saved Successfully.....!');
+
     }
     public function AddCart($id)
     {
@@ -105,8 +106,10 @@ class CartController extends Controller
         session()->forget('cart');
         return redirect()->back()->with('msg','Cart cleared successfully.');
     }
-    public function PlaceOrder()
+    public function PlaceOrder(Request $request)
     {
+       
+    
         $carts=session()->get('cart');
         if($carts)
         {
@@ -132,5 +135,7 @@ class CartController extends Controller
         }
         return redirect()->back()->with('error','No Data found in cart.');
     }
+
+    
 
 }
