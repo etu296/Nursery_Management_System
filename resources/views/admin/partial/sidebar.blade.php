@@ -87,15 +87,7 @@
             </a>
           </li>
           
-          <li class="nav-item">
-            <a href="{{route('admin.order.details')}}" class="nav-link">
-            <i class="fas fa-cart-plus"></i>
-              <p>
-              Order Details
-                
-              </p>
-            </a>
-          </li>
+         
 
           <li class="nav-item">
             <a href="{{route('admin.payments')}}" class="nav-link">

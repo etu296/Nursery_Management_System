@@ -108,14 +108,12 @@
 													
 												</form>
 												<br><br>
-												@if(session()->has('msg'))
-                                             <p class="alert alert-success">{{session()->get('msg')}}</p>
-                                                 @endif
+												
 												
 												<p style="text-align:center">
 												<b>Shipping Address</b>
 												</p>
-												<form action="{{route('shipping.details.store')}}" id="formshipping" method="post" class="form-horizontal">
+												<!-- <form action="{{route('shipping.details.store')}}" id="formshipping" method="post" class="form-horizontal">
 												@csrf	
                                                 <div class="form-group">
 														<div class="col-md-12">
@@ -162,7 +160,7 @@
 													</div>
 													
 													
-												</form>
+												</form> -->
 											</div>
 										</div>
 									</div>

@@ -13,11 +13,10 @@ class OrderController extends Controller
         $orders=Order::with('user')->get();
         return view('admin.pages.order.order-list',compact('orders'));
     }
-    public function OrderDetails()
+    public function OrderDetails($id)
     {
-        $orders=Orderdetail::with('order','product')->get();
-
-        return view('admin.pages.order.order-details',compact('orders'));
+        $order=Orderdetail::find($id);
+        return view('admin.pages.order.order-details',compact('order'));
     }
     public function CancelOrder($id)
     {

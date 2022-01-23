@@ -27,6 +27,8 @@
             @if($order->status!='cancel')
             <a href="{{route('admin.order.cancel',$order->id)}}" class="btn btn-danger">Cancel</a>
             @endif
+            <a href="{{route('admin.order.details',$order->id)}}" class="btn btn-danger">Details</a>
+</td>
     </tr>
     @endforeach
   </tbody>

@@ -79,8 +79,8 @@ Route::post('/shipping/address/save',[CartController::class,'shipping_address'])
 
      });
 
-   Route::get('admin_login',[AdminloginController::class,'adminLogin'])->name('admin.login');
-  Route::post('/doAadmin/login',[AdminloginController::class,'doadminlogin'])->name('do.admin.login');
+Route::get('admin_login',[AdminloginController::class,'adminLogin'])->name('admin.login');
+Route::post('/doAadmin/login',[AdminloginController::class,'doadminlogin'])->name('do.admin.login');
    
 
 Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
@@ -125,8 +125,9 @@ Route::put('/plant/update/,{plant_id}',[PlantsController::class,'plant_update'])
 Route::get('/search/plantss',[PlantsController::class,'planttSearch'])->name('plant.search');
 //orders
 Route::get('/orders',[OrderController::class,'orderlist'])->name('admin.orders');
-Route::get('/order/details',[OrderController::class,'OrderDetails'])->name('admin.order.details');
 Route::get('/cancle/order/{id}',[OrderController::class,'CancelOrder'])->name('admin.order.cancel');
+Route::get('/details/order/{id}',[OrderController::class,'OrderDetails'])->name('admin.order.details');
+
 //payments
 Route::get('/payments',[PaymentController::class,'paymentlist'])->name('admin.payments');
 Route::post('/payments/store',[PaymentController::class,'store'])->name('paymentstore');

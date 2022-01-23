@@ -38,7 +38,6 @@ class CartController extends Controller
             'mobile'=>$request->mobile,
         ]);
         return redirect()->back()->with('msg','Shiping Address Saved Successfully.....!');
-
     }
     public function AddCart($id)
     {
@@ -106,10 +105,8 @@ class CartController extends Controller
         session()->forget('cart');
         return redirect()->back()->with('msg','Cart cleared successfully.');
     }
-    public function PlaceOrder(Request $request)
+    public function PlaceOrder()
     {
-       
-    
         $carts=session()->get('cart');
         if($carts)
         {
@@ -117,7 +114,8 @@ class CartController extends Controller
                 'user_id'=>auth()->user()->id,
                 'total_price'=>array_sum(array_column($carts,'product_price')),
             ]);
-        
+            
+           
       
         foreach ($carts as $cart)
             {
@@ -135,7 +133,5 @@ class CartController extends Controller
         }
         return redirect()->back()->with('error','No Data found in cart.');
     }
-
-    
 
 }

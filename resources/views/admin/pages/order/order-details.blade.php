@@ -15,18 +15,17 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($orders as $key=>$order)
-      <tr >
-      <th scope="row">{{$key+1}}</th>
+ 
+        <td>{{$order->id}}</td>
         <td>{{$order->order->id}}</td>
         <td>{{$order->product->id}} </td>
         <td>{{$order->product->product_price}} </td>
         <td>{{$order->quantity}} </td>
         <td>{{$order->sub_total}} </td>
-
+ 
         
     </tr>
-    @endforeach
+   
   </tbody>
 </table>
 
