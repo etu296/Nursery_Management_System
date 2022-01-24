@@ -70,8 +70,6 @@ Route::get('/checkout',[CartController::class,'checkouttlist'])->name('website.c
 Route::get('/place/order',[CartController::class,'PlaceOrder'])->name('website.place.order');
 //user profile
 Route::get('/user/profile',[UserProfileController::class,'UserProfile'])->name('user.profile');
-Route::get('/user/address/{id}',[UserProfileController::class,'UserAddress'])->name('add.user.address');
-Route::post('/user/address/store/{id}',[UserProfileController::class,'UserAddressStore'])->name('website.user.store');
 //edit & Update profile
 Route::get('/profile/edit/{id}',[UserProfileController::class,'profile_edit'])->name('edit.profile');
 Route::put('/profile/update/{id}',[UserProfileController::class,'profile_update'])->name('profile.update');

@@ -67,6 +67,10 @@ padding : 50px 0;
     
   </div>
   <div class="form-group">
+    <input required type="text" name="address" class="form-control" placeholder="address">
+    
+  </div>
+  <div class="form-group">
     <input required type="password"  value="" name="password" class="form-control" placeholder="password">
   </div>
   

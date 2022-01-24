@@ -28,34 +28,14 @@ class UserProfileController extends Controller
       {
       $users->update([
         'name'=>$request->name,
-        'role'=>$request->role,
         'email'=>$request->email,
         'number'=>$request->number,
+        'address'=>$request->address
+
        ]);
       return redirect()->back()->with('msg', 'Profile Updated Successfully.');
     }
     }
-    public function UserAddress($id)
-    {
-      $users=User::find($id);
-
-        if($users)
-        {    
-          return view('website.pages.add-address',compact('users'));  
-         } 
-    }
-    public function UserAddressStore(Request $request , $id)
-    {
-      $users=User::find($id);
-      if($users)
-        { 
-          User::create([
-          'address'=>$request->address,
-          ]);
-          return redirect()->back()->with('msg','Address added sucessfully...!!');
-
-         }
-
-    }
+    
 }
 

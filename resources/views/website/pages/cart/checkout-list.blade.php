@@ -11,7 +11,7 @@
 								
                                 <div class="panel-group" id="accordion">
 									
-									
+								
 									<div class="panel panel-default">
 										<div class="panel-heading">
 											<h4 class="panel-title">
@@ -20,6 +20,18 @@
 												</a>
 											</h4>
 										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6">
+                                        <address>
+                                       <strong>{{auth()->user()->name}}</strong>
+                                        <br>
+                                         {{auth()->user()->email}}
+                                        <br>
+                                          {{auth()->user()->number}}
+                                        <br>
+                                           {{auth()->user()->address}}
+                                        <br>
+                                       </address>
+                                      </div>
 										
 										<div id="collapseThree" class="accordion-body collapse" style="height: 0px;">
 											<div class="panel-body">

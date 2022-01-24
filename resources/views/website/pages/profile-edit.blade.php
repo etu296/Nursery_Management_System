@@ -53,14 +53,7 @@ padding : 50px 0;
                                             <input name="name" type="text" value="{{auth()->user()->name}}">
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Role</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                            <input name="role" type="text" value="{{auth()->user()->role}}">
-                                            </div>
-                                        </div>
+                                        
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Email</label>
@@ -77,7 +70,14 @@ padding : 50px 0;
                                             <input name="number" type="number" value="{{auth()->user()->number}}">
                                             </div>
                                         </div>
-
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Address</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                            <input name="address" type="text" value="{{auth()->user()->address}}">
+                                            </div>
+                                        </div>
                                        
                                         <div class="col-md-6">
 <button type="submit" class="btn btn-success">save change</button>                                            </div>
