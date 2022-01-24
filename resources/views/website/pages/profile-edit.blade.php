@@ -13,11 +13,11 @@
 <style>
 	@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 .login-block{
-    background: #DE6262;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-float:left;
+    background-image: url(/frontend/images/slide2.jpg);
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 width:100%;
+height: 100%;
 padding : 50px 0;
 }
 .banner-sec{background:url()  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
@@ -40,7 +40,7 @@ padding : 50px 0;
     <div class="container">
 	<div class="row">
 		<div class="col-md-4 login-sec">
-		    <h2 class="text-center">My Profile</h2>
+		    <h2 class="text-center">Edit Profile</h2>
 			<form class="login-form" action="{{route('profile.update',$users->id)}}" method="post" enctype="multipart/form-data">
 			@csrf
             @method('put')

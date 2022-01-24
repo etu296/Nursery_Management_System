@@ -1,101 +1,209 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<style>
-	@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-.login-block{
-    background: #DE6262;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-float:left;
-width:100%;
-padding : 50px 0;
-}
-.banner-sec{background:url()  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
-.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
-.carousel-inner{border-radius:0 10px 10px 0;}
-.carousel-caption{text-align:left; left:5%;}
-.login-sec{padding: 50px 30px; position:relative;}
-.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
-.login-sec .copy-text i{color:#FEB58A;}
-.login-sec .copy-text a{color:#E36262;}
-.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
-.login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
-.btn-login{background: #DE6262; color:#fff; font-weight:600;}
-.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
-.banner-text h2{color:#fff; font-weight:600;}
-.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
-.banner-text p{color:#fff;}
-</style>
-<section class="login-block">
-    <div class="container">
-	<div class="row">
-		<div class="col-md-4 login-sec">
-		    <h2 class="text-center">My Profile</h2>
-			<form class="login-form" action="{{route('edit.profile',auth()->user()->id)}}"  >
-			@csrf
-            <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{auth()->user()->name}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Role</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{auth()->user()->role}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{auth()->user()->email}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{auth()->user()->number}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Address</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{auth()->user()->address}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                        <button type="submit" class="btn btn-success">Edit Profile</button>                                            </div>
-                                       </div>
-                                          </div>
- 
-                                          </form>
-		
-                                      
 
-  </div>
-            </div>	   
-		    
+<!--
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+<style>
+    /***
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+body {
+  background-image: url(/frontend/images/s8.jpg);
+}
+
+/* Profile container */
+.profile {
+  margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 170px 0 70px 0;
+  background: #fff;
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}
+</style>
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+                <form class="login-form" action="{{route('edit.profile',auth()->user()->id)}}"  >
+			        @csrf
+				<div class="profile-usertitle">
+                
+					<div class="profile-usertitle-name">
+                    <i class="glyphicon glyphicon-user"></i>
+                    {{auth()->user()->name}}
+                    <br>
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    {{auth()->user()->email}}
+                    <br>
+                    <i class="glyphicon glyphicon-phone"></i>
+                    {{auth()->user()->number}}
+					</div>
+					<div class="profile-usertitle-job">
+                    <i class="glyphicon glyphicon-user"></i>
+                    {{auth()->user()->role}}
+                    <br>
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    {{auth()->user()->address}}
+					</div>
+                
+				   </div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				   <div class="profile-userbuttons">
+                    <button type="submit" class="btn btn-success">Edit Profile</button> 
+                    <a href="{{route('home.contact')}}">				
+                    <button type="button"  class="btn btn-danger btn-sm">Message</button></a>
+				</div>
+                </form>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="{{route('home')}}">
+							<i class="glyphicon glyphicon-home" ></i>
+							Home </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Your Profile </a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-shopping-cart"></i>
+							 Orders </a>
+						</li>
+                        <li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-shopping-cart"></i>
+							Carts </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
 		</div>
+		
 	</div>
 </div>
-</section>
+
+<br>
+<br>
 
 
 			
