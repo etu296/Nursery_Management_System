@@ -73,21 +73,16 @@ padding : 50px 0;
                                             </div>
                                         </div>
                                         <div class="row">
-                                            
-                                            <div class="col-md-6">
-                                            <button type="submit" class="btn btn-success">Edit Profile</button>                                            </div>
-                                            </div>
-                                        </div>
-
-  
-
-
-    
-  
-</form>
+                                        <button type="submit" class="btn btn-success">Edit Profile</button>                                            </div>
+                                       </div>
+                                          </div>
+ 
+                                          </form>
 		
-    
-    
+                                    <a href="{{route('add.user.address',auth()->user()->id)}} ">
+                                          <button type="button"  class="btn btn-info">Add address</button> 
+                                          </a>    
+
   </div>
             </div>	   
 		    

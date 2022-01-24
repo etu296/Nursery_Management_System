@@ -14,7 +14,10 @@
     <label for="exampleInputEmail1" class="form-label">Product Details</label>
     <input required name="products_details" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Product quantity</label>
+    <input required name="quantity" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Product Cetagory</label>
     <select name="product_cetagory" class="form-control" id="exampleFormControlSelect1">

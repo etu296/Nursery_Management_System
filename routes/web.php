@@ -46,10 +46,7 @@ Route::get('/website/plant-view/{id}',[HomeController::class,'plantview'])->name
 
 //login register
 Route::get('/login',[LoginController::class,'login'])->name('login');
-Route::get('/user/profile',[UserProfileController::class,'UserProfile'])->name('user.profile');
-//edit & Update profile
-Route::get('/profile/edit/{id}',[UserProfileController::class,'profile_edit'])->name('edit.profile');
-Route::put('/profile/update/{id}',[UserProfileController::class,'profile_update'])->name('profile.update');
+
 
 //login logout register
 Route::post('/do/login',[LoginController::class,'dologin'])->name('dologin');
@@ -61,9 +58,6 @@ Route::post('/register/store',[LoginController::class,'registerstore'])->name('r
 Route::get('/contact/list',[HomepageContactController::class,'homecontactlist'])->name('home.contact');
 Route::post('/contact/store',[HomepageContactController::class,'contactstore'])->name('contactStore');
 
-
-
-
 // Route::get('/', function () {
 //      return view('website.pages.home');
 // });
@@ -74,10 +68,14 @@ Route::get('/clear/cart/',[CartController::class,'clearCart'])->name('clear.cart
 //cart
 Route::get('/checkout',[CartController::class,'checkouttlist'])->name('website.checkout');
 Route::get('/place/order',[CartController::class,'PlaceOrder'])->name('website.place.order');
-//shipping details
-Route::post('/shipping/address/save',[CartController::class,'shipping_address'])->name('shipping.details.store');
-
-     });
+//user profile
+Route::get('/user/profile',[UserProfileController::class,'UserProfile'])->name('user.profile');
+Route::get('/user/address/{id}',[UserProfileController::class,'UserAddress'])->name('add.user.address');
+Route::post('/user/address/store/{id}',[UserProfileController::class,'UserAddressStore'])->name('website.user.store');
+//edit & Update profile
+Route::get('/profile/edit/{id}',[UserProfileController::class,'profile_edit'])->name('edit.profile');
+Route::put('/profile/update/{id}',[UserProfileController::class,'profile_update'])->name('profile.update');
+ });
 
 Route::get('admin_login',[AdminloginController::class,'adminLogin'])->name('admin.login');
 Route::post('/doAadmin/login',[AdminloginController::class,'doadminlogin'])->name('do.admin.login');

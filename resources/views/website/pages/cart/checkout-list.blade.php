@@ -9,15 +9,6 @@
 							<div class="checkout-left col-lg-9 col-md-9 col-sm-9 col-xs-12">
 								<p>Returning customer? <a class="login" href="{{route('login')}}">Click here to login</a>.</p>
 								
-								@if ($errors->any())
-                                      <div class="alert alert-danger">
-                                         <ul>
-                               @foreach ($errors->all() as $error)
-                                     <li>{{ $error }}</li>
-                               @endforeach
-                                         </ul>
-                                       </div>
-                               @endif
                                 <div class="panel-group" id="accordion">
 									
 									
@@ -107,60 +98,7 @@
 													</div>
 													
 												</form>
-												<br><br>
 												
-												
-												<p style="text-align:center">
-												<b>Shipping Address</b>
-												</p>
-												<!-- <form action="{{route('shipping.details.store')}}" id="formshipping" method="post" class="form-horizontal">
-												@csrf	
-                                                <div class="form-group">
-														<div class="col-md-12">
-															<label>Name </label>
-															<input required type="text" name="name" class="form-control">
-														</div>
-													</div>
-
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>City</label>
-															<select required name="city" class="form-control">
-                                                            <option value="">Select a city</option>
-                                                                <option value="Bangladesh">Dhaka</option>
-																<option value="Maymensing">Maymensing</option>
-																<option value="Narayangang">Narayangang</option>
-															</select>
-														</div>
-													</div>
-                                                    <div class="form-group">
-														<div class="col-md-12">
-															<label>Area</label>
-															<select required name="area" class="form-control">
-																<option value="">Select Area</option>
-                                                                <option value="Uttara">Uttara</option>
-																<option value="Gazipur">Gazipur</option>
-																<option value="Mohammadpur">Mohammadpur</option>
-															</select>
-														</div>
-													</div>
-													
-													
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Address </label>
-															<input required name="address" type="text" value="" class="form-control">
-														</div>
-													</div>
-                                                    <div class="form-group">
-														<div class="col-md-12">
-															<label>Mobile </label>
-															<input required name="mobile" type="number" value="" class="form-control">
-														</div>
-													</div>
-													
-													
-												</form> -->
 											</div>
 										</div>
 									</div>

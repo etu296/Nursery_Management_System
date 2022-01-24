@@ -77,6 +77,7 @@ padding : 50px 0;
                                             <input name="number" type="number" value="{{auth()->user()->number}}">
                                             </div>
                                         </div>
+
                                        
                                         <div class="col-md-6">
 <button type="submit" class="btn btn-success">save change</button>                                            </div>

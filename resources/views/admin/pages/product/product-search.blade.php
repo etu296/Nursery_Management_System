@@ -30,6 +30,7 @@
       </th>
       <th>{{$product->product_price}}</th>
       <th>{{$product->products_details}}</th>
+      <th>{{$product->quantity}}</th>
       <th>{{optional($product->pcategory)->pcname}}</th>
       <th>{{optional($product->category)->C_name}}</th>
       <th>

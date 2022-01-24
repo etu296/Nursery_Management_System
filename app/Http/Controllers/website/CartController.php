@@ -20,25 +20,7 @@ class CartController extends Controller
         $carts=session()->get('cart');
         return view('website.pages.cart.checkout-list',compact('carts','productCetagory','categories'));   
     }
-    public function shipping_address(Request $request)
-    {
-        $request->validate([
-            'name'=>'required',
-            'city'=>'required',
-            'area'=>'required',
-            'address'=>'required',
-            'mobile'=>'required|numeric|digits:11',
-        ]);
-        ShippingDetail::create
-        ([
-            'name'=>$request->name,
-            'city'=>$request->city,
-            'area'=>$request->area,
-            'address'=>$request->address,
-            'mobile'=>$request->mobile,
-        ]);
-        return redirect()->back()->with('msg','Shiping Address Saved Successfully.....!');
-    }
+   
     public function AddCart($id)
     {
         
@@ -92,7 +74,7 @@ class CartController extends Controller
         
         
        
-    }
+        }
     public function GetCart()
     {
         $productCetagory=Pcetagory::all();
@@ -108,17 +90,17 @@ class CartController extends Controller
     public function PlaceOrder()
     {
         $carts=session()->get('cart');
+
         if($carts)
         {
             $order=Order::create([
                 'user_id'=>auth()->user()->id,
                 'total_price'=>array_sum(array_column($carts,'product_price')),
             ]);
-            
-           
-      
+
         foreach ($carts as $cart)
             {
+                
                 Orderdetail::create([
                     'order_id'=> $order->id,
                     'product_id'=>$cart['product_id'],

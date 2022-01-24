@@ -30,6 +30,7 @@ class ProductController extends Controller
         'product_name'=>$request->product_name,
         'product_price'=>$request->product_price,
         'products_details'=>$request->products_details,
+        'quantity'=>$request->quantity,
         'product_cetagory'=>$request->product_cetagory,
         'plant_cetagory'=>$request->plant_cetagory,
         'product_image'=> $filename
@@ -106,6 +107,7 @@ class ProductController extends Controller
         'product_name'=>$request->product_name,
         'product_price'=>$request->product_price,
         'products_details'=>$request->products_details,
+        'quantity'=>$request->quantity,
         'product_cetagory'=>$request->product_cetagory,
         'plant_cetagory'=>$request->plant_cetagory,
         'product_image'=>$productimage
