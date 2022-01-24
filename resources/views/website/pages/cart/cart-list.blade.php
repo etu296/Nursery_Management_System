@@ -83,11 +83,7 @@
 													</tbody>
 												</table>
 
-												<h4 class="heading-primary">Payment</h4>
-												<form action="#" method="post">
-													<div class="item">
-														<input type="checkbox">Cash On Payment
-													</div>
+												
                           <br><br>
                          <a href="{{route('website.checkout')}}" class="btn btn-success">Check Out</a>
                          <a href="{{route('clear.cart')}}" class="btn btn-danger">Cleare Cart</a>

@@ -33,7 +33,7 @@
                                        </address>
                                       </div>
 										
-										<div id="collapseThree" class="accordion-body collapse" style="height: 0px;">
+										
 											<div class="panel-body">
 												<table class="cart-summary table table-bordered">
 													<thead>
@@ -110,46 +110,17 @@
 													</div>
 													
 												</form>
-												
+												<br><br>
+												<a href="{{route('website.place.order')}}" class="btn btn-primary">Place Order</a>
+
 											</div>
 										</div>
 									</div>
 								</div>
 								
-									<a href="{{route('website.place.order')}}" class="btn btn-primary">Place Order</a>
 							</div>
 							
-							<div class="checkout-right col-lg-3 col-md-3 col-sm-3 col-xs-12">
-								<h4 class="title">Cart Total</h4>
-								<table class="table cart-total">
-									<tbody>
-										<tr class="cart-subtotal">
-											<th>
-												<strong>Cart Subtotal</strong>
-											</th>
-											<td>
-												<strong><span class="amount">$431</span></strong>
-											</td>
-										</tr>
-										<tr class="shipping">
-											<th>
-												Shipping
-											</th>
-											<td>
-												Free Shipping<input type="hidden" value="free_shipping" class="shipping-method" name="shipping_method">
-											</td>
-										</tr>
-										<tr class="total">
-											<th>
-												<strong>Order Total</strong>
-											</th>
-											<td>
-												<strong><span class="amount">$431</span></strong>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+							
 						</div>
 					</div>
 				</div>
