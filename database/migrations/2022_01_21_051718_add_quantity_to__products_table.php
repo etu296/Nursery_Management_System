@@ -14,7 +14,7 @@ class AddQuantityToProductsTable extends Migration
     public function up()
     {
         Schema::table('_products', function (Blueprint $table) {
-            $table->integer('quantity');
+            $table->integer('quantity')->default('1');
         });
     }
 

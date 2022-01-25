@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 @section('content')
-<h2>DESHBOARD</h2>
+<h2>DASHBOARD</h2>
 <div class="row row-cols-1 row-cols-md-3 g-4">
  <div class="col-lg-3 col-6">
             <div class="small-box bg-danger">

@@ -49,6 +49,7 @@
 													
 													<tbody>
 														<tr>
+														@php $total = 0; @endphp
 														@if($carts)
                                                           @foreach($carts as $key=>$data)
 															<td>
@@ -69,6 +70,7 @@
 															{{$data['product_price'] * $data['product_qty']}}
 															</td>
 														</tr>
+														@php $total += $data['product_price'] * $data['product_qty'] ; @endphp
 														@endforeach
                                                        @endif
 														
@@ -83,6 +85,7 @@
 																Cart Subtotal
 															</th>
 															<td class="total">
+															{{$total}} BDT
 															</td>
 														</tr>
 														<tr>
@@ -98,6 +101,7 @@
 																<strong>Order Total</strong>
 															</th>
 															<td class="total">
+															{{$total}} BDT
 															</td>
 														</tr>
 													</tbody>
