@@ -20,6 +20,7 @@
 												</a>
 											</h4>
 										</div>
+										@if($carts)
 										<div class="col-xs-6 col-sm-6 col-md-6">
                                         <address>
                                        <strong>{{auth()->user()->name}}</strong>
@@ -32,8 +33,8 @@
                                         <br>
                                        </address>
                                       </div>
-										
-										
+									  @endif
+						
 											<div class="panel-body">
 												<table class="cart-summary table table-bordered">
 													<thead>
