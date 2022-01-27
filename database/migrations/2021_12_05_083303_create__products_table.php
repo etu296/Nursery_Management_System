@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('product_cetagory');
             $table->string('plant_cetagory');
             $table->string('product_image');
+            $table->integer('quantity');
             $table->timestamps();
         });
     }

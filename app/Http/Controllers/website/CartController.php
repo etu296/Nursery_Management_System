@@ -70,7 +70,7 @@ class CartController extends Controller
                 'product_price' => $product->product_price,
                 'product_qty' =>1,
                 'product_img' => $product->product_image,
-                'sub_total' => $product->product_price * 1, 
+                'total_price' => $product->product_price * 1, 
 
             ];
           //dd($cartExist);
@@ -80,9 +80,7 @@ class CartController extends Controller
             
         }
       
-            $cartExist[$id]['product_qty']++;
            // dd($cartExist);
-            session()->put('cart', $cartExist);
 
             return redirect()->back()->with('msg', 'Product Added to Cart.');
         
