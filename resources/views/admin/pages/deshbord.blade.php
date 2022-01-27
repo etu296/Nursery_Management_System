@@ -103,18 +103,6 @@
             </div>
           </div> 
 
-          <div class="col-lg-3 col-6">
-          <div class="small-box bg-success">
-              <div class="inner">
-                <h4>{{$count['shipping']}}</h4>
-
-                <p>Shipping Details</p>
-              </div>
-              <div class="icon">
-              <i class="fas fa-shipping-fast"></i>
-              </div>
-              <a href="{{route('admin.shipping.details')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
+          
 
 @endsection

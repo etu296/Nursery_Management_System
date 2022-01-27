@@ -17,7 +17,7 @@
   <tbody>
 @foreach($orders as $key=>$orderdetail)
         <td>{{$key+1}}</td>
-        <td>{{$orderdetail->order->id}}</td>
+        <td>{{$orderdetail->order_id}}</td>
         <td>{{$orderdetail->product->id}} </td>
         <td>{{$orderdetail->product->product_price}} </td>
         <td>{{$orderdetail->quantity}} </td>
