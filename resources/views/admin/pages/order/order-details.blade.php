@@ -15,17 +15,15 @@
     </tr>
   </thead>
   <tbody>
- 
-        <td>{{$order->id}}</td>
-        <td>{{$order->order->id}}</td>
-        <td>{{$order->product->id}} </td>
-        <td>{{$order->product->product_price}} </td>
-        <td>{{$order->quantity}} </td>
-        <td>{{$order->sub_total}} </td>
- 
-        
+@foreach($orderdetails as $key=>$orderdetail)
+        <td>{{$key+1}}</td>
+        <td>{{$orderdetail->order->id}}</td>
+        <td>{{$orderdetail->product->id}} </td>
+        <td>{{$orderdetail->product->product_price}} </td>
+        <td>{{$orderdetail->quantity}} </td>
+        <td>{{$orderdetail->sub_total}} </td>   
     </tr>
-   
+    @endforeach 
   </tbody>
 </table>
 
