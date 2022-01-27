@@ -81,6 +81,7 @@ class CartController extends Controller
         }
       
            // dd($cartExist);
+            session()->put('cart', $cartExist);
 
             return redirect()->back()->with('msg', 'Product Added to Cart.');
         
@@ -102,12 +103,14 @@ class CartController extends Controller
     public function PlaceOrder()
     {
         $carts=session()->get('cart');
+        
+        $total = array_sum(array_column($carts,'total_price'));
 
         if($carts)
         {
             $order=Order::create([
                 'user_id'=>auth()->user()->id,
-                'total_price'=>array_sum(array_column($carts,'product_price')),
+                'total_price'=> $total ,
             ]);
 
         foreach ($carts as $cart)
@@ -122,7 +125,7 @@ class CartController extends Controller
                 ]);
                
             }
-            dd($order);
+           // dd($order);
             session()->forget('cart');
             return redirect()->back()->with('msg','Order Placed Successfully.');
         }
