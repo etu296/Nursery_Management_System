@@ -30,19 +30,27 @@ class CartController extends Controller
             return redirect()->back()->with('error','Product not found....!');
         }
         $cartExist=session()->get('cart');
+
+        if(array_key_exists($product->id,(array)$cartExist))
+        {
+            $cartExist[$product->id]['product_qty']++;
+            $cartExist[$product->id]['total_price']=$cartExist [$product->id]['product_qty'] * $cartExist [$product->id]['product_price'];
+
+
+        }
         
         if(!$cartExist)
         {
-           // dd($cartExist); 
+           //dd($cartExist); 
             $cartdata=[
                 
                 $id=>[
                     'product_id' => $id,
                     'product_name' => $product->product_name,
                     'product_price' => $product->product_price,
-                    'product_qty' => $product->quantity,
+                    'product_qty' => 1,
                     'product_img' => $product->product_image,
-                    'sub_total' => $product->product_price * $product->quantity
+                    'total_price' => $product->product_price * 1
                 ]
                
             ];
@@ -60,9 +68,9 @@ class CartController extends Controller
                 'product_id' => $id,
                 'product_name' => $product->product_name,
                 'product_price' => $product->product_price,
-                'product_qty' => $product->quantity,
+                'product_qty' =>1,
                 'product_img' => $product->product_image,
-                'sub_total' => $product->product_price * $product->quantity, 
+                'sub_total' => $product->product_price * 1, 
 
             ];
           //dd($cartExist);
@@ -73,7 +81,7 @@ class CartController extends Controller
         }
       
             $cartExist[$id]['product_qty']++;
-            //dd($cartExist);
+            dd($cartExist);
             session()->put('cart', $cartExist);
 
             return redirect()->back()->with('msg', 'Product Added to Cart.');
