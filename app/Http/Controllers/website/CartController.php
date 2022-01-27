@@ -81,7 +81,7 @@ class CartController extends Controller
         }
       
             $cartExist[$id]['product_qty']++;
-            dd($cartExist);
+           // dd($cartExist);
             session()->put('cart', $cartExist);
 
             return redirect()->back()->with('msg', 'Product Added to Cart.');
@@ -124,6 +124,7 @@ class CartController extends Controller
                 ]);
                
             }
+            dd($order);
             session()->forget('cart');
             return redirect()->back()->with('msg','Order Placed Successfully.');
         }
