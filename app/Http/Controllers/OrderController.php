@@ -15,9 +15,9 @@ class OrderController extends Controller
     }
     public function OrderDetails($id)
     {
-        $order=Orderdetail::find($id)->with('order','product')->get();
+        $orders=Orderdetail::find($id)->with('order','product')->get();
      
-        return view('admin.pages.order.order-details',compact('order'));
+        return view('admin.pages.order.order-details',compact('orders'));
     }
     public function CancelOrder($id)
     {

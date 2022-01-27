@@ -15,7 +15,7 @@
     </tr>
   </thead>
   <tbody>
-@foreach($order as $key=>$orderdetail)
+@foreach($orders as $key=>$orderdetail)
         <td>{{$key+1}}</td>
         <td>{{$orderdetail->order->id}}</td>
         <td>{{$orderdetail->product->id}} </td>
