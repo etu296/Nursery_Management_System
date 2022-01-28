@@ -20,7 +20,6 @@
                         <div class="ps-product__categories"><a href="product-listing.html">{{$p->name}}</a></div>
                         <p class="ps-product__price">
                           BDT {{$p->price}}
-                        </p><a class="ps-btn ps-btn--sm" href="product-detail-2.html">Add to cart</a>
                         </p><a class="ps-btn ps-btn--sm" href="{{route('website.plant.view',$p->id)}}">View Details</a>
                         <p class="ps-product__feature"><i class="furniture-delivery-truck-2"></i>Free Shipping in 24 hours</p>
                       </div>

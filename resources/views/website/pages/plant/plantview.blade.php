@@ -28,7 +28,6 @@
                     </div>
                     
                     
-                    <div class="ps-product__shopping"><a class="ps-btn" href="cart.html">Add To Cart</a>
                       <div class="ps-product__actions"><a class="mr-10" href="whishlist.html"><i class="furniture-heart"></i></a><a href="compare.html" title="Compare"><i class="furniture-reload"></i></a></div>
                     </div>
                     <div class="ps-product__sharing">

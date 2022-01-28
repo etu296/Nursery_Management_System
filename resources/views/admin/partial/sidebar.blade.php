@@ -89,7 +89,7 @@
           
          
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="{{route('admin.payments')}}" class="nav-link">
             <i class="fas fa-money-bill-alt"></i>
               <p>
@@ -97,7 +97,7 @@
                 
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="{{route('admin.customer')}}" class="nav-link">
             <i class="fas fa-users"></i>
@@ -118,7 +118,7 @@
             </a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="{{route('admin.delivery')}}" class="nav-link">
             <i class="fas fa-truck"></i>
               <p>
@@ -126,7 +126,7 @@
                 
               </p>
             </a>
-          </li>
+          </li> -->
 
          
 

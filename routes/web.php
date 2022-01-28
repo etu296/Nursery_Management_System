@@ -147,7 +147,7 @@ Route::get('/messege',[CotactController::class,'contactlist'])->name('admin.mess
 
 //customers
 Route::get('/customers',[CustomerController::class,'customerlist'])->name('admin.customer');
-//view delete
+
 });
 
 

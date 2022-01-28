@@ -21,7 +21,7 @@
                 <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 ">
                   <div class="ps-product__info">
                     <div class="ps-product__rating">
-                      <a href="#">(Read all 8 reviews)</a>
+                      <a href="#"></a>
                     </div>
                     <h1>{{$plant->name}}</h1>
                     <p class="ps-product__category"><a href="#">  {{$plant->name}}</a></p>
@@ -49,21 +49,7 @@
                             <label for="color-4"></label>
                           </div>
                     </div>
-                    <div class="ps-product__block ps-product__size">
-                      <h4>CHOOSE SIZE & QUANTITY</h4>
-                      <select class="ps-select selectpicker" title="Select Size">
-                        <option value="0">1</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                        <option value="3">4</option>
-                        <option value="4">5</option>
-                        <option value="5">6</option>
-                      </select>
-                      <div class="form-group ps-number">
-                        <input class="form-control" type="text" value="1"><span class="up"></span><span class="down"></span>
-                      </div>
-                    </div>
-                    <div class="ps-product__shopping"><a class="ps-btn" href="cart.html">Add To Cart</a>
+                    
                       <div class="ps-product__actions"><a class="mr-10" href="whishlist.html"><i class="furniture-heart"></i></a><a href="compare.html" title="Compare"><i class="furniture-reload"></i></a></div>
                     </div>
                     <div class="ps-product__sharing">

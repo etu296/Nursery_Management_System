@@ -46,7 +46,7 @@
             </div>
           </div> 
 
-  <div class="col-lg-3 col-6">
+  <!-- <div class="col-lg-3 col-6">
   <div class="small-box bg-info">
               <div class="inner">
                 <h4>{{$count['payment']}}</h4>
@@ -58,7 +58,7 @@
               </div>
               <a href="{{route('admin.payments')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-          </div> 
+          </div>  -->
 
 
   <div class="col-lg-3 col-6">
@@ -76,7 +76,7 @@
           </div> 
 
           <div class="col-lg-3 col-6">
-  <div class="small-box bg-danger">
+  <div class="small-box bg-warning">
               <div class="inner">
                 <h4>{{$count['message']}}</h4>
 
@@ -89,7 +89,7 @@
             </div>
           </div> 
 
-  <div class="col-lg-3 col-6">
+  <!-- <div class="col-lg-3 col-6">
   <div class="small-box bg-secondary">
               <div class="inner">
                 <h4>{{$count['delivery']}}</h4>
@@ -101,7 +101,7 @@
               </div>
               <a href="{{route('admin.delivery')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-          </div> 
+          </div>  -->
 
           
 
