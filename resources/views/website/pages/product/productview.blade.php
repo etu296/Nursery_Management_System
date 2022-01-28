@@ -27,12 +27,7 @@
                       <p>{{$product->products_details}}</p>
                     </div>
                     
-                    <div class="ps-product__block ps-product__size">
-                      <h4>CHOOSE  QUANTITY</h4>
-                      
-                      <div class="form-group ps-number">
-                        <input class="form-control" type="text" value="1"><span class="up"></span><span class="down"></span>
-                      </div>
+                   
                     </div>
                     <div class="ps-product__shopping"><a class="ps-btn" href="{{route('add.to.cart',$product->id)}}">Add To Cart</a>
                       <div class="ps-product__actions"><a class="mr-10" href="whishlist.html"><i class="furniture-heart"></i></a><a href="compare.html" title="Compare"><i class="furniture-reload"></i></a></div>
