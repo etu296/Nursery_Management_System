@@ -116,7 +116,7 @@
 													
 												</form>
 												<br><br>
-												<a href="{{route('website.place.order')}}" class="btn btn-primary">Place Order</a>
+												<a href="{{route('website.place.order')}}" class="btn btn-primary">Confirm Order</a>
 
 											</div>
 										</div>

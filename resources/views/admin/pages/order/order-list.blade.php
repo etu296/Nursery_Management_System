@@ -24,7 +24,7 @@
           {{$order->status}}
         </td>
         <td>
-            @if($order->status!='cancel')
+            @if($order->status!='Delivered')
             <a href="{{route('admin.order.cancel',$order->id)}}" class="btn btn-danger">Cancel</a>
             @endif
             <a href="{{route('admin.order.details',$order->id)}}" class="btn btn-danger">Details</a>

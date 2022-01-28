@@ -23,7 +23,7 @@ class OrderController extends Controller
     {
         $order=Order::find($id);
         $order->update([
-            'status'=>'cancel'
+            'status'=>'Delivered'
         ]);
  
         return redirect()->back();
