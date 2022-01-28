@@ -19,7 +19,7 @@
 					<a class="ps-product__overlay" href="product-detail.html"></a>
                       <div class="ps-product__content full">
                             <a class="ps-product__title" href="product-detail-2.html">{{$product->product_name}}</a>
-                        <div class="ps-product__categories"><a href="product-listing.html">{{$product->product_name}}</a></div>
+                        <div class="ps-product__categories"><a href="product-listing.html">{{optional($product->pcategory)->pcname}}</a></div>
                         <p class="ps-product__price">
                           BDT {{$product->product_price}}
                         </p><a class="ps-btn ps-btn--sm" href="{{route('add.to.cart',$product->id)}}">Add to cart</a>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="ps-product__content">
                           <a class="ps-product__title" href="product-detail-2.html">{{$product->product_name}}</a>
-                      <div class="ps-product__categories"><a href="product-listing.html">{{$product->product_name}}</a></div>
+                      <div class="ps-product__categories"><a href="product-listing.html">{{optional($product->pcategory)->pcname}}</a></div>
                       <p class="ps-product__price">
                         BDT {{$product->product_price}}
                       </p>

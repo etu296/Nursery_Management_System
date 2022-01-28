@@ -15,7 +15,7 @@
                 <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 ">
                   <div class="ps-product__info">
                     <div class="ps-product__rating">
-                      <a href="#">(Read all 8 reviews)</a>
+                      <a href="#"></a>
                     </div>
                     <h1>{{$product->product_name}}</h1>
                     <p class="ps-product__category"><a href="#">  {{$product->product_name}}</a></p>
@@ -26,7 +26,6 @@
                     <p>{{optional($product->pcategory)->pcname}}</p>
                       <p>{{$product->products_details}}</p>
                     </div>
-                    
                    
                     </div>
                     <div class="ps-product__shopping"><a class="ps-btn" href="{{route('add.to.cart',$product->id)}}">Add To Cart</a>
