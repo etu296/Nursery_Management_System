@@ -104,7 +104,7 @@ class CartController extends Controller
     {
         $carts=session()->get('cart');
         
-        $total = array_sum(array_column($carts,'total_price'));
+        $total = array_sum(array_column((array)$carts,'total_price'));
 
         if($carts)
         {
