@@ -26,17 +26,7 @@
                           </div>
                         </div>
                         
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
-                          <div class="ps-widget ps-widget--footer widget widget_footer">
-                            <h2 class="widget-title">Your Account<span></span></h2>
-                            <ul class="ps-list--line">
-                              <li><a href="#">Your account</a></li>
-                              <li><a href="#">Information</a></li>
-                              <li><a href="#">Payment menthod</a></li>
-                              <li><a href="#">Your wishlist</a></li>
-                            </ul>
-                          </div>
-                        </div>
+                        
                   </div>
                 </div>
           </div>

@@ -45,7 +45,7 @@ class LoginController extends Controller
             'name'=>'required',
             'email'=>'required|email',
             'number'=>'required|numeric|digits:11',
-            'address'=>'required',
+            // 'address'=>'required',
             
           ]);
          User::create([
@@ -53,7 +53,7 @@ class LoginController extends Controller
             'email'=>$request->email,
             'password'=>bcrypt($request->password),
             'number'=>$request->number,
-            'address'=>$request->address,
+            // 'address'=>$request->address,
 
          ]);
          return redirect()->back()->with('msg','Account Created Successfully.....Please Login'); 

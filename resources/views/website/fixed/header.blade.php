@@ -61,7 +61,6 @@
                               <ul class="sub-menu">
                                 <li><a href="{{route('get.cart')}}">Shopping Cart</a></li>
                                 <li><a href="{{route('website.checkout')}}">Checkout</a></li>
-                                <li><a href="whishlist.html">Whishlist</a></li>
                               </ul>
                         </li>
                       </ul>
